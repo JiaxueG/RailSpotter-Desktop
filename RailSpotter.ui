@@ -54,6 +54,9 @@
              <height>400</height>
             </size>
            </property>
+           <property name="acceptDrops">
+            <bool>true</bool>
+           </property>
            <property name="text">
             <string>图片预览</string>
            </property>
@@ -65,7 +68,11 @@
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
-            <widget class="QLineEdit" name="LineAddress"/>
+            <widget class="QLineEdit" name="LineAddress">
+             <property name="acceptDrops">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
            <item>
             <widget class="QPushButton" name="btnInput">
