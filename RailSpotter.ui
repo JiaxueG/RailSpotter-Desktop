@@ -404,6 +404,19 @@
                        <pointsize>12</pointsize>
                       </font>
                      </property>
+                     <property name="layoutDirection">
+                      <enum>Qt::RightToLeft</enum>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="checked">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btnMU">
                      <property name="text">
                       <string>动车</string>
                      </property>
@@ -1062,17 +1075,49 @@
           </widget>
          </item>
          <item>
-          <spacer name="verticalSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
+          <widget class="QGroupBox" name="groupBoxFSsetting">
+           <property name="title">
+            <string/>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>568</height>
-            </size>
-           </property>
-          </spacer>
+           <widget class="QWidget" name="">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>130</y>
+              <width>102</width>
+              <height>80</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_25">
+             <item>
+              <widget class="QLabel" name="labelFS">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>文件分类法</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBoxFStime">
+               <property name="text">
+                <string>时空</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBoxFSvehicle">
+               <property name="text">
+                <string>车辆</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
          </item>
          <item>
           <widget class="QPushButton" name="btnSave">
@@ -1087,6 +1132,11 @@
              <width>130</width>
              <height>170</height>
             </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
            </property>
            <property name="text">
             <string>保存</string>
