@@ -5,9 +5,12 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from Ui_RailSpotter import Ui_MainWindow
 from aip import AipImageClassify
+from shutil import copyfile
+import os
 
 class launcher(QMainWindow, Ui_MainWindow): 
-    imgName = ""
+    imgLocation = ""
+    fileLocation=''
     def __init__(self, parent=None): 
         super().__init__(parent)
         self.ui=Ui_MainWindow()
@@ -17,21 +20,30 @@ class launcher(QMainWindow, Ui_MainWindow):
         self.ui.btnInput.clicked.connect(self.imageOpen)
         self.ui.btnSave.clicked.connect(self.saveAll)
         self.ui.btnMU.clicked.connect(self.setMU)
+        self.ui.btnLocationSelect.clicked.connect(self.locationSelect)
 
     def basicUi(self): 
         self.ui.status=self.statusBar()
         self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1')
          
+    def locationSelect(self): 
+        try: 
+            self.fileLocation = QFileDialog.getExistingDirectory()
+            self.ui.LineLocation.setText(self.fileLocation)
+            # print(self.fileLocation)
+        except: 
+            self.ui.LineLocation.setText('选择根目录文件夹')
+
     def imageOpen(self): 
         try: 
-            self.imgName, imgType = QFileDialog.getOpenFileName(self, "打开图片", "", "*.jpg;;All Files(*)")
-            self.ui.LineAddress.setText(self.imgName)
+            self.imgLocation, imgType = QFileDialog.getOpenFileName(self, "打开图片", "", "*.jpg;;All Files(*)")
+            self.ui.LineAddress.setText(self.imgLocation)
             self.imageShow()
         except: 
             self.ui.labelPicview.setText('图片预览')
     
     def imageShow(self): 
-        image=QtGui.QPixmap(self.imgName)
+        image=QtGui.QPixmap(self.imgLocation)
         if image.width() > self.ui.labelPicview.width() or image.height() > self.ui.labelPicview.height():
             scaleWidth = image.width()/self.ui.labelPicview.width()
             scaleHeight = image.height()/self.ui.labelPicview.height()
@@ -39,7 +51,7 @@ class launcher(QMainWindow, Ui_MainWindow):
                 scale = scaleWidth
             else:
                 scale = scaleHeight
-        imageDisplay = QtGui.QPixmap(self.imgName).scaled(image.width()/scale, image.height()/scale)
+        imageDisplay = QtGui.QPixmap(self.imgLocation).scaled(image.width()/scale, image.height()/scale)
         self.ui.labelPicview.setPixmap(imageDisplay)  # display
     
     def isEmpty(self): 
@@ -82,11 +94,27 @@ class launcher(QMainWindow, Ui_MainWindow):
             self.ui.listWidgetLens.addItem(self.ui.lineEditLens.text())
         if self.ui.lineEditMemo.text(): 
             self.ui.listWidgetMemo.addItem(self.ui.lineEditMemo.text())
+        self.picSave()
         # File system check
-        if self.ui.checkBoxFStime.isChecked()==True: 
+        #if self.ui.checkBoxFStime.isChecked()==True: 
             # Save as file system => file
-        if self.ui.checkBoxFSvehicle.isChecked()==True: 
+        #if self.ui.checkBoxFSvehicle.isChecked()==True: 
             # Save as file system => vehicle
+    def picSave(self): 
+        source=self.imgLocation
+        country='/'+self.ui.lineEditCountry.text()
+        loco = '/'+self.ui.lineEditLoco.text()
+        number = '/'+self.ui.lineEditNumber.text()
+        target = self.fileLocation+country+loco+number+'/'
+        if not os.path.exists(self.fileLocation+country):
+            os.mkdir(self.fileLocation+country)
+        if not os.path.exists(self.fileLocation+country+loco):
+            os.mkdir(self.fileLocation+country+loco)
+        if not os.path.exists(self.fileLocation+country+loco+number):
+            os.mkdir(self.fileLocation+country+loco+number)
+        copyfile(source, target)
+
+
 
 
 if __name__=='__main__': 
