@@ -1197,7 +1197,7 @@
   <tabstop>lineEditCountry</tabstop>
   <tabstop>lineEditLocation</tabstop>
   <tabstop>lineEditLoco</tabstop>
-  <tabstop>checkBoxMU</tabstop>
+  <tabstop>btnMU</tabstop>
   <tabstop>lineEditNumber</tabstop>
   <tabstop>btnNumber</tabstop>
   <tabstop>lineEditCarriage</tabstop>
@@ -1227,6 +1227,11 @@
   <tabstop>listWidgetMemo</tabstop>
   <tabstop>btnClearAll</tabstop>
   <tabstop>listWidgetLocation</tabstop>
+  <tabstop>checkBoxFStime</tabstop>
+  <tabstop>checkBoxFSvehicle</tabstop>
+  <tabstop>checkBoxMU</tabstop>
+  <tabstop>LineLocation</tabstop>
+  <tabstop>btnLocationSelect</tabstop>
  </tabstops>
  <resources/>
  <connections/>

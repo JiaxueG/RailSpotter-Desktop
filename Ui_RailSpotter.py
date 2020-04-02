@@ -501,8 +501,8 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(self.dateTimeEdit, self.lineEditCountry)
         MainWindow.setTabOrder(self.lineEditCountry, self.lineEditLocation)
         MainWindow.setTabOrder(self.lineEditLocation, self.lineEditLoco)
-        MainWindow.setTabOrder(self.lineEditLoco, self.checkBoxMU)
-        MainWindow.setTabOrder(self.checkBoxMU, self.lineEditNumber)
+        MainWindow.setTabOrder(self.lineEditLoco, self.btnMU)
+        MainWindow.setTabOrder(self.btnMU, self.lineEditNumber)
         MainWindow.setTabOrder(self.lineEditNumber, self.btnNumber)
         MainWindow.setTabOrder(self.btnNumber, self.lineEditCarriage)
         MainWindow.setTabOrder(self.lineEditCarriage, self.btnCarriage)
@@ -531,6 +531,11 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(self.listWidgetCompany, self.listWidgetMemo)
         MainWindow.setTabOrder(self.listWidgetMemo, self.btnClearAll)
         MainWindow.setTabOrder(self.btnClearAll, self.listWidgetLocation)
+        MainWindow.setTabOrder(self.listWidgetLocation, self.checkBoxFStime)
+        MainWindow.setTabOrder(self.checkBoxFStime, self.checkBoxFSvehicle)
+        MainWindow.setTabOrder(self.checkBoxFSvehicle, self.checkBoxMU)
+        MainWindow.setTabOrder(self.checkBoxMU, self.LineLocation)
+        MainWindow.setTabOrder(self.LineLocation, self.btnLocationSelect)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
