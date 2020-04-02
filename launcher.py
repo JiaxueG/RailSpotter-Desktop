@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from Ui_RailSpotter import Ui_MainWindow
 from aip import AipImageClassify
-from shutil import copyfile
+import shutil
 import os
 
 class launcher(QMainWindow, Ui_MainWindow): 
@@ -94,13 +94,13 @@ class launcher(QMainWindow, Ui_MainWindow):
             self.ui.listWidgetLens.addItem(self.ui.lineEditLens.text())
         if self.ui.lineEditMemo.text(): 
             self.ui.listWidgetMemo.addItem(self.ui.lineEditMemo.text())
-        self.picSave()
+        self.picSaveVehicle()
         # File system check
         #if self.ui.checkBoxFStime.isChecked()==True: 
             # Save as file system => file
         #if self.ui.checkBoxFSvehicle.isChecked()==True: 
             # Save as file system => vehicle
-    def picSave(self): 
+    def picSaveVehicle(self): 
         source=self.imgLocation
         country='/'+self.ui.lineEditCountry.text()
         loco = '/'+self.ui.lineEditLoco.text()
@@ -112,13 +112,15 @@ class launcher(QMainWindow, Ui_MainWindow):
             os.mkdir(self.fileLocation+country+loco)
         if not os.path.exists(self.fileLocation+country+loco+number):
             os.mkdir(self.fileLocation+country+loco+number)
-        copyfile(source, target)
-
-
+        try:
+            shutil.copy(source, target)
+            self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1 - 图片已保存到'+target)
+        except: 
+            self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1 - 图片未成功保存')
 
 
 if __name__=='__main__': 
     app=QApplication(sys.argv)
     window=launcher()
     window.show()
-    sys.exit(app.exec_())    
+    sys.exit(app.exec_())
