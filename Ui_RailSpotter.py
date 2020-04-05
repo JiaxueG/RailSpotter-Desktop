@@ -86,6 +86,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(12)
         self.dateTimeEdit.setFont(font)
+        self.dateTimeEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 2), QtCore.QTime(0, 0, 0)))
         self.dateTimeEdit.setObjectName("dateTimeEdit")
         self.verticalLayout_4.addWidget(self.dateTimeEdit)
         self.labelHis = QtWidgets.QLabel(self.widget)

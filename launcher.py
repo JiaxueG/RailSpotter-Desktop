@@ -7,6 +7,7 @@ from Ui_RailSpotter import Ui_MainWindow
 from aip import AipImageClassify
 import shutil
 import os
+import exifread
 
 class launcher(QMainWindow, Ui_MainWindow): 
     imgLocation = ""
@@ -39,6 +40,8 @@ class launcher(QMainWindow, Ui_MainWindow):
             self.imgLocation, imgType = QFileDialog.getOpenFileName(self, "打开图片", "", "*.jpg;;All Files(*)")
             self.ui.LineAddress.setText(self.imgLocation)
             self.imageShow()
+            # print('next')
+            #self.imageOpen()
         except: 
             self.ui.labelPicview.setText('图片预览')
     
@@ -52,7 +55,7 @@ class launcher(QMainWindow, Ui_MainWindow):
             else:
                 scale = scaleHeight
         imageDisplay = QtGui.QPixmap(self.imgLocation).scaled(image.width()/scale, image.height()/scale)
-        self.ui.labelPicview.setPixmap(imageDisplay)  # display
+        self.ui.labelPicview.setPixmap(imageDisplay)  # display      
     
     def isEmpty(self): 
         return self.length==0
@@ -63,12 +66,18 @@ class launcher(QMainWindow, Ui_MainWindow):
             self.ui.btnCarriage.setEnabled(False)
             self.ui.lineEditCarriage.setEnabled(False)
             self.ui.listWidgetCarriage.setEnabled(False)
+            self.ui.lineEditCarriage.setText('')
         else: 
             self.ui.checkBoxMU.setCheckState(0)
             self.ui.btnCarriage.setEnabled(True)
             self.ui.lineEditCarriage.setEnabled(True)
             self.ui.listWidgetCarriage.setEnabled(True)
         
+    
+
+
+    #def dateSet(self): 
+        # self.dateTimeEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 2), QtCore.QTime(0, 0, 0)))
 
     def saveAll(self): #Incompleted
         # copy everything to history
