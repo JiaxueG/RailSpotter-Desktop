@@ -214,8 +214,9 @@ class launcher(QMainWindow, Ui_MainWindow):
         name=location+loco+number+carriage+company+line+service+camera+lens+memo
         # check num of pics in this file
         fileNum=0
-        if os.path.isfile(self.target): 
-            fileNum=fileNum+1
+        fileNum=len(os.listdir(self.target))+1
+        # if os.path.isfile(self.target): 
+        #     fileNum=fileNum+1
         name=name+'_'+str(fileNum)
         nameOrigin=os.path.split(self.imgLocation)
         os.rename(self.target+str(nameOrigin[1]), self.target+name+'.jpg')
