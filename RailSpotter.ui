@@ -690,8 +690,14 @@
                    </item>
                    <item>
                     <widget class="QPushButton" name="btnCompany">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
                      <property name="text">
                       <string>未知</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>false</bool>
                      </property>
                     </widget>
                    </item>
@@ -758,6 +764,9 @@
                    </item>
                    <item>
                     <widget class="QPushButton" name="btnLine">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
                      <property name="text">
                       <string>未知</string>
                      </property>
@@ -826,6 +835,9 @@
                    </item>
                    <item>
                     <widget class="QPushButton" name="btnService">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
                      <property name="text">
                       <string>未知</string>
                      </property>
@@ -1119,44 +1131,6 @@
            <property name="title">
             <string/>
            </property>
-           <widget class="QWidget" name="">
-            <property name="geometry">
-             <rect>
-              <x>10</x>
-              <y>130</y>
-              <width>102</width>
-              <height>80</height>
-             </rect>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_25">
-             <item>
-              <widget class="QLabel" name="labelFS">
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>文件分类法</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="checkBoxFStime">
-               <property name="text">
-                <string>时空</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="checkBoxFSvehicle">
-               <property name="text">
-                <string>车辆</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
           </widget>
          </item>
          <item>
@@ -1237,8 +1211,6 @@
   <tabstop>listWidgetMemo</tabstop>
   <tabstop>btnClearAll</tabstop>
   <tabstop>listWidgetLocation</tabstop>
-  <tabstop>checkBoxFStime</tabstop>
-  <tabstop>checkBoxFSvehicle</tabstop>
   <tabstop>checkBoxMU</tabstop>
   <tabstop>LineLocation</tabstop>
   <tabstop>btnLocationSelect</tabstop>

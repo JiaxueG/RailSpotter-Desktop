@@ -12,6 +12,7 @@ import exifread
 class launcher(QMainWindow, Ui_MainWindow): 
     imgLocation = ""
     fileLocation=''
+    target=''
     def __init__(self, parent=None): 
         super().__init__(parent)
         self.ui=Ui_MainWindow()
@@ -22,10 +23,42 @@ class launcher(QMainWindow, Ui_MainWindow):
         self.ui.btnSave.clicked.connect(self.saveAll)
         self.ui.btnMU.clicked.connect(self.setMU)
         self.ui.btnLocationSelect.clicked.connect(self.locationSelect)
+        self.ui.btnNumber.clicked.connect(self.unknownNumber)
+        self.ui.btnCarriage.clicked.connect(self.unknownCarriage)
+        self.ui.btnCompany.clicked.connect(self.unknownCompany)
+        self.ui.btnLine.clicked.connect(self.unknownLine)
+        self.ui.btnService.clicked.connect(self.unknownService)
+        self.ui.btnClearAll.clicked.connect(self.clearAll)
 
     def basicUi(self): 
         self.ui.status=self.statusBar()
         self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1')
+    
+    def clearAll(self): 
+        self.ui.lineEditCountry.clear()
+        self.ui.lineEditLocation.clear()
+        self.ui.lineEditLoco.clear()
+        self.ui.lineEditNumber.clear()
+        self.lineEditCarriage.clear()
+        self.lineEditCompany.clear()
+        self.lineEditLine.clear()
+        self.ui.lineEditService.clear()
+        self.ui.lineEditCamera.clear()
+        self.ui.lineEditLens.clear()
+        self.ui.lineEditMemo.clear()
+        self.ui.listWidgetCountry.clear()
+        self.ui.listWidgetLocation.clear()
+        self.ui.listWidgetLoco.clear()
+        self.ui.listWidgetNumber.clear()
+        self.ui.listWidgetCarriage.clear()
+        self.ui.listWidgetCompany.clear()
+        self.ui.listWidgetLine.clear()
+        self.ui.listWidgetService.clear()
+        self.ui.listWidgetCamera.clear()
+        self.ui.listWidgetLens.clear()
+        self.ui.listWidgetMemo.clear()
+        self.ui.LineAddress.clear()
+        self.ui.LineLocation.clear()
          
     def locationSelect(self): 
         try: 
@@ -34,6 +67,21 @@ class launcher(QMainWindow, Ui_MainWindow):
             # print(self.fileLocation)
         except: 
             self.ui.LineLocation.setText('选择根目录文件夹')
+    
+    def unknownNumber(self): 
+        self.ui.lineEditNumber.setText('未知')
+
+    def unknownCarriage(self):
+        self.ui.lineEditCarriage.setText('未知')
+
+    def unknownCompany(self):
+        self.ui.lineEditCompany.setText('未知')
+    
+    def unknownLine(self):
+        self.ui.lineEditLine.setText('未知')
+    
+    def unknownService(self):
+        self.ui.lineEditService.setText('未知')
 
     def imageOpen(self): 
         try: 
@@ -56,9 +104,6 @@ class launcher(QMainWindow, Ui_MainWindow):
                 scale = scaleHeight
         imageDisplay = QtGui.QPixmap(self.imgLocation).scaled(image.width()/scale, image.height()/scale)
         self.ui.labelPicview.setPixmap(imageDisplay)  # display      
-    
-    def isEmpty(self): 
-        return self.length==0
     
     def setMU(self): 
         if self.ui.checkBoxMU.isChecked()==False: 
@@ -111,7 +156,7 @@ class launcher(QMainWindow, Ui_MainWindow):
         country='/'+self.ui.lineEditCountry.text()
         loco = '/'+self.ui.lineEditLoco.text()
         number = '/'+self.ui.lineEditNumber.text()
-        target = self.fileLocation+country+loco+number+'/'
+        self.target = self.fileLocation+country+loco+number+'/'
         if not os.path.exists(self.fileLocation+country):
             os.mkdir(self.fileLocation+country)
         if not os.path.exists(self.fileLocation+country+loco):
@@ -119,14 +164,62 @@ class launcher(QMainWindow, Ui_MainWindow):
         if not os.path.exists(self.fileLocation+country+loco+number):
             os.mkdir(self.fileLocation+country+loco+number)
         try:
-            shutil.copy(source, target)
-            self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1 - 图片已保存到'+target)
+            shutil.copy(source, self.target)
+            self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1 - 图片已保存到'+self.target)
         except: 
             self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1 - 图片未成功保存')
+        self.reName()
     
-    # def picSaveTimeDate(self): 
-
-
+    def reName(self): 
+        if self.ui.lineEditLocation.text():
+            location = self.ui.lineEditLocation.text()+'_'
+        else:
+            location = ''
+        if self.ui.lineEditLoco.text(): 
+            loco = self.ui.lineEditLoco.text()+'_'
+        else: 
+            loco = ''
+        if self.ui.lineEditNumber.text(): 
+            number = self.ui.lineEditNumber.text()+'_'
+        else: 
+            number = ''
+        if self.ui.lineEditCarriage.text():
+            carriage = self.ui.lineEditCarriage.text()+'_'
+        else:
+            carriage = ''
+        if self.ui.lineEditCompany.text():
+            company = self.ui.lineEditCompany.text()+'_'
+        else:
+            company = ''
+        if self.ui.lineEditLine.text():
+            line = self.ui.lineEditLine.text()+'_'
+        else:
+            line = ''
+        if self.ui.lineEditService.text():
+            service = self.ui.lineEditService.text()+'_'
+        else:
+            service = ''
+        if self.ui.lineEditCamera.text():
+            camera = self.ui.lineEditCamera.text()+'_'
+        else:
+            camera = ''
+        if self.ui.lineEditLens.text():
+            lens = self.ui.lineEditLens.text()+'_'
+        else:
+            lens = ''
+        if self.ui.lineEditMemo.text():
+            memo = self.ui.lineEditMemo.text()+'_'
+        else:
+            memo = ''
+        name=location+loco+number+carriage+company+line+service+camera+lens+memo
+        # check num of pics in this file
+        fileNum=0
+        if os.path.isfile(self.target): 
+            fileNum=fileNum+1
+        name=name+'_'+str(fileNum)
+        nameOrigin=os.path.split(self.imgLocation)
+        os.rename(self.target+str(nameOrigin[1]), self.target+name+'.jpg')
+  
 if __name__=='__main__': 
     app=QApplication(sys.argv)
     window=launcher()
