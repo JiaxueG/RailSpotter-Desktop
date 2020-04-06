@@ -2,7 +2,7 @@ import sys
 from PyQt5 import QtWidgets, QtCore, QtGui
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
+from PyQt5.QtCore import QDate, QDateTime, QTime
 from Ui_RailSpotter import Ui_MainWindow
 from aip import AipImageClassify
 import shutil
@@ -41,7 +41,7 @@ class launcher(QMainWindow, Ui_MainWindow):
             self.ui.LineAddress.setText(self.imgLocation)
             self.imageShow()
             # print('next')
-            #self.imageOpen()
+            # self.imageOpen()
         except: 
             self.ui.labelPicview.setText('图片预览')
     
@@ -72,10 +72,7 @@ class launcher(QMainWindow, Ui_MainWindow):
             self.ui.btnCarriage.setEnabled(True)
             self.ui.lineEditCarriage.setEnabled(True)
             self.ui.listWidgetCarriage.setEnabled(True)
-        
     
-
-
     #def dateSet(self): 
         # self.dateTimeEdit.setDateTime(QtCore.QDateTime(QtCore.QDate(2000, 1, 2), QtCore.QTime(0, 0, 0)))
 
@@ -126,6 +123,8 @@ class launcher(QMainWindow, Ui_MainWindow):
             self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1 - 图片已保存到'+target)
         except: 
             self.ui.status.showMessage('RailSpotter Desktop by JiaxueG v0.1 - 图片未成功保存')
+    
+    # def picSaveTimeDate(self): 
 
 
 if __name__=='__main__': 
