@@ -20,6 +20,7 @@ class launcher(QMainWindow, Ui_MainWindow):
         self.ui.setupUi(self)
         self.basicUi()
         self.widgetDisable()
+        self.setWindowIcon(QIcon('logo.ico'))
         # Controller
         self.ui.btnInput.clicked.connect(self.imageOpen)
         self.ui.btnSave.clicked.connect(self.saveAll)
