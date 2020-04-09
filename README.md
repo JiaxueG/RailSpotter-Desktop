@@ -3,7 +3,7 @@ The desktop version of RailSpotter. (mobile apps are in development, whose funct
 If you want .exe directly, it's in 'dist', just download that, it will run.  
 
 **v0.1 Beta 2020.04.09**   
-Basic functions realised, which include:  
+Basic functions realised:  
 1. Save images as country/location/loco/loco number  
 2. The image will be renamed as: location_loco_locoNumber_carriage_company_rail line_service_camera_lens_memo_number of img  
   
