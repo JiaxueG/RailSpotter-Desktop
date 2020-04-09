@@ -1,6 +1,7 @@
 # RailSpotter-Desktop
 The desktop version of RailSpotter. (mobile apps are in development, whose function would focus on collect/search and share. )  
-  
+If you want .exe directly, it's in 'dist', just download that, it will run.  
+
 **v0.1 Beta 2020.04.09**   
 Basic functions realised, which include:  
 1. Save images according to country/location/loco/loco number  
