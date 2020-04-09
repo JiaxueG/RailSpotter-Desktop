@@ -3,7 +3,7 @@
  False,
  False,
  False,
- None,
+ 'logo.ico',
  None,
  False,
  False,
@@ -346,7 +346,7 @@
  [],
  False,
  False,
- 1586439894,
+ 1586445966,
  [('runw.exe',
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
