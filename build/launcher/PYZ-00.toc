@@ -52,6 +52,54 @@
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\selectors.py',
    'PYMODULE'),
+  ('_py_abc',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\_py_abc.py',
+   'PYMODULE'),
+  ('bz2',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\bz2.py',
+   'PYMODULE'),
+  ('threading',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\threading.py',
+   'PYMODULE'),
+  ('_threading_local',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\_threading_local.py',
+   'PYMODULE'),
+  ('contextlib',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\contextlib.py',
+   'PYMODULE'),
+  ('_compression',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\_compression.py',
+   'PYMODULE'),
+  ('quopri',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\quopri.py',
+   'PYMODULE'),
+  ('stringprep',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\typing.py',
+   'PYMODULE'),
+  ('tracemalloc',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\tracemalloc.py',
+   'PYMODULE'),
+  ('pickle',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\pickle.py',
+   'PYMODULE'),
+  ('pprint',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\pprint.py',
+   'PYMODULE'),
   ('doctest',
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\doctest.py',
@@ -59,22 +107,6 @@
   ('unittest',
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\__init__.py',
-   'PYMODULE'),
-  ('ntpath',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\ntpath.py',
-   'PYMODULE'),
-  ('string',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\string.py',
-   'PYMODULE'),
-  ('genericpath',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\genericpath.py',
-   'PYMODULE'),
-  ('stat',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\stat.py',
    'PYMODULE'),
   ('unittest.signals',
    'c:\\users\\jiaxue '
@@ -96,14 +128,6 @@
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\loader.py',
    'PYMODULE'),
-  ('fnmatch',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\fnmatch.py',
-   'PYMODULE'),
-  ('posixpath',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\posixpath.py',
-   'PYMODULE'),
   ('unittest.suite',
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\suite.py',
@@ -112,33 +136,13 @@
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\unittest\\case.py',
    'PYMODULE'),
-  ('contextlib',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\contextlib.py',
-   'PYMODULE'),
-  ('pprint',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\pprint.py',
-   'PYMODULE'),
   ('logging',
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\logging\\__init__.py',
    'PYMODULE'),
-  ('pickle',
+  ('string',
    'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\pickle.py',
-   'PYMODULE'),
-  ('_compat_pickle',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\_compat_pickle.py',
-   'PYMODULE'),
-  ('threading',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\threading.py',
-   'PYMODULE'),
-  ('_threading_local',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\_threading_local.py',
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\string.py',
    'PYMODULE'),
   ('unittest.result',
    'c:\\users\\jiaxue '
@@ -256,10 +260,6 @@
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\email\\feedparser.py',
    'PYMODULE'),
-  ('quopri',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\quopri.py',
-   'PYMODULE'),
   ('uu',
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\uu.py',
@@ -279,6 +279,18 @@
   ('socketserver',
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\socketserver.py',
+   'PYMODULE'),
+  ('posixpath',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\posixpath.py',
+   'PYMODULE'),
+  ('genericpath',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\genericpath.py',
+   'PYMODULE'),
+  ('stat',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\stat.py',
    'PYMODULE'),
   ('mimetypes',
    'c:\\users\\jiaxue '
@@ -484,57 +496,25 @@
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\__future__.py',
    'PYMODULE'),
-  ('_py_abc',
+  ('_compat_pickle',
    'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\_py_abc.py',
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\_compat_pickle.py',
    'PYMODULE'),
-  ('typing',
+  ('ntpath',
    'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\typing.py',
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\ntpath.py',
    'PYMODULE'),
-  ('tracemalloc',
+  ('fnmatch',
    'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\tracemalloc.py',
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\fnmatch.py',
    'PYMODULE'),
-  ('bz2',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\bz2.py',
+  ('Ui_RailSpotter',
+   'C:\\Users\\JIAXUE '
+   'GONG\\Documents\\GitHub\\RailSpotter-Desktop\\Ui_RailSpotter.py',
    'PYMODULE'),
-  ('_compression',
+  ('PyQt5',
    'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\_compression.py',
-   'PYMODULE'),
-  ('stringprep',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\stringprep.py',
-   'PYMODULE'),
-  ('os',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\os.py',
-   'PYMODULE'),
-  ('shutil',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\shutil.py',
-   'PYMODULE'),
-  ('zipfile',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\zipfile.py',
-   'PYMODULE'),
-  ('py_compile',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\py_compile.py',
-   'PYMODULE'),
-  ('tarfile',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\tarfile.py',
-   'PYMODULE'),
-  ('gzip',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\gzip.py',
-   'PYMODULE'),
-  ('lzma',
-   'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\lzma.py',
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\PyQt5\\__init__.py',
    'PYMODULE'),
   ('aip',
    'c:\\users\\jiaxue '
@@ -743,6 +723,18 @@
   ('requests.utils',
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\requests\\utils.py',
+   'PYMODULE'),
+  ('zipfile',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\zipfile.py',
+   'PYMODULE'),
+  ('py_compile',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\py_compile.py',
+   'PYMODULE'),
+  ('lzma',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\lzma.py',
    'PYMODULE'),
   ('requests.certs',
    'c:\\users\\jiaxue '
@@ -1000,11 +992,103 @@
    'c:\\users\\jiaxue '
    'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\aip\\ocr.py',
    'PYMODULE'),
-  ('Ui_RailSpotter',
-   'C:\\Users\\JIAXUE '
-   'GONG\\Documents\\GitHub\\RailSpotter-Desktop\\Ui_RailSpotter.py',
-   'PYMODULE'),
-  ('PyQt5',
+  ('exifread',
    'c:\\users\\jiaxue '
-   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\PyQt5\\__init__.py',
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\__init__.py',
+   'PYMODULE'),
+  ('exifread.utils',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\utils.py',
+   'PYMODULE'),
+  ('exifread.tags',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\__init__.py',
+   'PYMODULE'),
+  ('exifread.tags.makernote',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\makernote\\__init__.py',
+   'PYMODULE'),
+  ('exifread.tags.makernote.olympus',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\makernote\\olympus.py',
+   'PYMODULE'),
+  ('exifread.tags.makernote.nikon',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\makernote\\nikon.py',
+   'PYMODULE'),
+  ('exifread.tags.makernote.fujifilm',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\makernote\\fujifilm.py',
+   'PYMODULE'),
+  ('exifread.tags.makernote.casio',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\makernote\\casio.py',
+   'PYMODULE'),
+  ('exifread.tags.makernote.canon',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\makernote\\canon.py',
+   'PYMODULE'),
+  ('exifread.tags.makernote.apple',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\makernote\\apple.py',
+   'PYMODULE'),
+  ('exifread.tags.exif',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\tags\\exif.py',
+   'PYMODULE'),
+  ('exifread.classes',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\classes.py',
+   'PYMODULE'),
+  ('xml.dom.minidom',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\xml\\dom\\minidom.py',
+   'PYMODULE'),
+  ('xml.dom.pulldom',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\xml\\dom\\pulldom.py',
+   'PYMODULE'),
+  ('xml.dom.expatbuilder',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\xml\\dom\\expatbuilder.py',
+   'PYMODULE'),
+  ('xml.dom.NodeFilter',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\xml\\dom\\NodeFilter.py',
+   'PYMODULE'),
+  ('xml.dom.xmlbuilder',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\xml\\dom\\xmlbuilder.py',
+   'PYMODULE'),
+  ('xml.dom.minicompat',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\xml\\dom\\minicompat.py',
+   'PYMODULE'),
+  ('xml.dom.domreg',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\xml\\dom\\domreg.py',
+   'PYMODULE'),
+  ('xml.dom',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\xml\\dom\\__init__.py',
+   'PYMODULE'),
+  ('exifread.exif_log',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\site-packages\\exifread\\exif_log.py',
+   'PYMODULE'),
+  ('shutil',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\shutil.py',
+   'PYMODULE'),
+  ('tarfile',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\tarfile.py',
+   'PYMODULE'),
+  ('gzip',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\gzip.py',
+   'PYMODULE'),
+  ('os',
+   'c:\\users\\jiaxue '
+   'gong\\appdata\\local\\programs\\python\\python37\\lib\\os.py',
    'PYMODULE')])
