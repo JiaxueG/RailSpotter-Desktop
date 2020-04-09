@@ -5,8 +5,7 @@ The desktop version of RailSpotter. (mobile apps are in development, whose funct
 Basic functions realised, which include:  
 1. Save images according to country/location/loco/loco number  
 2. The image will be renamed as: location_loco_locoNumber_carriage_company_rail line_service_camera_lens_memo_number of img  
-
-The v0.1 is very basic.  
+  
 Future plan:   
 1. Auto date/time will be added  
 2. More options for storage  
